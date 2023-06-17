@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Order summary card</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            xs: "376px",
+          },
+          extend: {
+            backgroundImage: {
+              mobile: 'url("./images/pattern-background-mobile.svg")',
+              desktop: 'url("./images/pattern-background-desktop.svg")',
+            },
+            colors: {
+              paleBlue: "hsl(225, 100%, 94%)",
+              brightBlue: "hsl(245, 75%, 52%)",
+              veryPaleBlue: "hsl(225, 100%, 98%)",
+              desaturatedBlue: "hsl(224, 23%, 55%)",
+              darkBlue: "hsl(223, 47%, 23%)",
+              customBlue: "hsl(245, 55%, 58%)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Jua&family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+      html * {
+        /* border: 1px solid green; */
+        font-family: "Red Hat Display";
+      }
+    </style>
+  </head>
+  <body
+    class="flex h-screen items-center px-6 bg-mobile xs:bg-desktop bg-paleBlue bg-repeat-x bg-top"
+  >
+    <div class="container mx-auto rounded-3xl shadow-lg max-w-sm bg-white">
+      <img src="./images/illustration-hero.svg" alt="" class="rounded-t-3xl" />
+      <div class="flex flex-col items-center space-y-6 px-5 py-8">
+        <h1 class="text-2xl font-black text-darkBlue">Order Summary</h1>
+        <p class="text-center text-desaturatedBlue font-bold">
+          You can now listen to millions of songs, audiobooks, and podcasts on
+          any device anywhere you like!
+        </p>
+        <div
+          class="flex w-full justify-between items-center bg-veryPaleBlue p-4 rounded-2xl"
+        >
+          <div class="flex space-x-4 items-center">
+            <img src="./images/icon-music.svg" alt="" />
+            <div class="text-sm">
+              <h2 class="text-darkBlue font-black">Annual Plan</h2>
+              <p class="text-desaturatedBlue font-bold">$59.99/year</p>
+            </div>
+          </div>
+          <a
+            href="#"
+            class="h-full text-sm font-black text-brightBlue underline hover:text-customBlue hover:no-underline"
+          >
+            Change
+          </a>
+        </div>
+        <button
+          class="bg-brightBlue text-white w-full rounded-2xl py-[14px] font-bold shadow-xl shadow-brightBlue/30 hover:bg-customBlue"
+        >
+          Proceed to Payment
+        </button>
+        <a href="#" class="font-black text-desaturatedBlue hover:text-darkBlue">
+          Cancel Order
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
